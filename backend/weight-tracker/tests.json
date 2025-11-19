@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Add new weight entry",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "weight_kg": 65.5,
+        "entry_date": "2025-01-19"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "weight_kg": 65.5,
+        "entry_date": "2025-01-19"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get weight entries list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
